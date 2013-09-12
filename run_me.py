@@ -3,6 +3,7 @@
 # -*- coding: utf-8 -*-
 import random
 import time
+import sys
 from power_console import printout
 
 __author__ = 'nullexception'
@@ -13,10 +14,12 @@ if __name__ == '__main__':
     time.sleep(1)
     print s
     time.sleep(4)
-    print 'Message decoding. Please wait...'
+    print 'Message decoding from ASCII. Please wait...'
     time.sleep(10)
     s = ''.join(map(chr, map(int, s.split())))
     for i in s:
-        printout(i, random.randint(0, 7))
+        printout(i, random.randint(1, 7))
     print '\n'
+    if sys.platform.startswith('win'):
+        raw_input()
 
