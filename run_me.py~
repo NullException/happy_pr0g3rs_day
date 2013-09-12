@@ -13,7 +13,7 @@ if __name__ == '__main__':
     time.sleep(1)
     print s
     time.sleep(4)
-    print 'Message decoding. Please wait...'
+    print 'Message decoding. Pleas wait...'
     time.sleep(10)
     s = ''.join(map(chr, map(int, s.split())))
     for i in s:
